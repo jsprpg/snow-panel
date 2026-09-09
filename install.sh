@@ -22,7 +22,7 @@ echo -e "${CYAN}Installation du panel...${NC}"
 sudo apt install whiptail -y >> install.log 2>&1
 
 
-if gum confirm "voulez vous installer le panel ? "  --default "oui" --affirmative "Oui" --negative "Non"; then
+if gum confirm "voulez vous installer le panel ? "  --default "Oui" --affirmative "Oui" --negative "Non"; then
     echo -e "${CYAN}Installation du panel...${NC}"
 else
     echo -e "${RED}Installation annulée.${NC}"
