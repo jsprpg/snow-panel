@@ -19,8 +19,8 @@ NC='\033[0m'
 # message de lancement de l'installation
 #--------------------------------------------------------------
 echo -e "${CYAN}Installation du panel...${NC}"
-sudo apt install whiptail -y >> install.log 2>&1
 
+gum choose --limit 1 Français Anglais 
 
 if gum confirm "voulez vous installer le panel ? "  --affirmative "true" --negative "false"; then
     echo -e "${CYAN}Installation du panel...${NC}"
@@ -28,6 +28,8 @@ else
     echo -e "${RED}Installation annulée.${NC}"
     exit 1
 fi
+
+
 # whiptail --msgbox "Ceci est un message" 10 50 –title "titre de la boite"
 # MENU=$(whiptail --checklist "Choisissez les modules à installer" 15 60 4 \
 #    "btop" "affichage des ressources système" ON \
