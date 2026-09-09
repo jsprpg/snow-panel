@@ -1,0 +1,42 @@
+body {
+    background: linear-gradient(to right, #030097, #070844);
+    font-family: Arial, sans-serif;
+}
+.topbar {
+    padding: 1;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topbar2 {
+    display: inline-block;
+    color: #66a6e2;
+}
+#nompanel {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+#panelimg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+#butuser {
+    background-color: #0f6fc9;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
