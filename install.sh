@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo apt install gum -y >> install.log 2>&1
 
 
 
@@ -20,7 +20,7 @@ NC='\033[0m'
 #--------------------------------------------------------------
 echo -e "${CYAN}Installation du panel...${NC}"
 sudo apt install whiptail -y >> install.log 2>&1
-sudo apt install gum -y >> install.log 2>&1
+
 
 if gum confirm "voulez vous installer le panel ? "  --default "oui" --affirmative "Oui" --negative "Non"; then
     echo -e "${CYAN}Installation du panel...${NC}"
