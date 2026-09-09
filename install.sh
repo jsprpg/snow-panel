@@ -20,12 +20,19 @@ NC='\033[0m'
 #--------------------------------------------------------------
 echo -e "${CYAN}Installation du panel...${NC}"
 sudo apt install whiptail -y >> install.log 2>&1
+sudo apt install gum -y >> install.log 2>&1
 
-whiptail --msgbox "Ceci est un message" 10 50 –title "titre de la boite"
-MENU=$(whiptail --checklist "Choisissez les modules à installer" 15 60 4 \
-    "btop" "affichage des ressources système" ON \
-    "htop" "affichage des processus en temps réel" OFF \
-    3>&1 1>&2 2>&3)
+if gum confirm "voulez vous installer le panel ? "  --default "oui" --affirmative "Oui" --negative "Non"; then
+    echo -e "${CYAN}Installation du panel...${NC}"
+else
+    echo -e "${RED}Installation annulée.${NC}"
+    exit 1
+fi
+# whiptail --msgbox "Ceci est un message" 10 50 –title "titre de la boite"
+# MENU=$(whiptail --checklist "Choisissez les modules à installer" 15 60 4 \
+#    "btop" "affichage des ressources système" ON \
+#    "htop" "affichage des processus en temps réel" OFF \
+#    3>&1 1>&2 2>&3)
 
 echo -e "${CYAN}----------------------------------------------------${NC}"
 echo -e "${CYAN}Bienvenue dans l'installation du Snow Web Panel...${NC}"
