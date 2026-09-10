@@ -20,7 +20,43 @@ NC='\033[0m'
 #--------------------------------------------------------------
 echo -e "${CYAN}Installation du panel...${NC}"
 
-gum choose --limit 1 Français Anglais 
+LANGCHOOSE=$(gum choose --limit 1 Français Anglais)
+
+if [ "$LANGCHOOSE" = "Français" ]; then
+    echo -e "${CYAN}Langue choisie : Français${NC}"
+    source snow_web_panel/lang/bash/fr.sh
+
+    if gum confirm "$MSG_INSTALL"  --affirmative "$MSG_YES" --negative "$MSG_NO"; then
+        echo -e "${CYAN}$MSG_INSTALL1${NC}"
+    else
+        echo -e "${RED}$MSG_INSTALLCANCEL${NC}"
+        exit 1
+    fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if gum confirm "voulez vous installer le panel ? "  --affirmative "true" --negative "false"; then
     echo -e "${CYAN}Installation du panel...${NC}"
