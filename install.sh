@@ -103,16 +103,5 @@ sudo apt install git -y >> install.log 2>&1
 echo -e "${CYAN}Instalation de Node.js et npm...${NC}"
 sudo apt install nodejs npm -y >> install.log 2>&1
 
-
-if [[ $MENU == *"btop"* ]]; then
-    echo -e "${CYAN}Installation de btop...${NC}"
-    sudo apt install btop -y >> install.log 2>&1
-fi
-
-if [[ $MENU == *"htop"* ]]; then
-    echo -e "${CYAN}Installation de htop...${NC}"
-    sudo apt install htop -y >> install.log 2>&1
-fi
-
 echo -e "${CYAN}Fin de l'installation des dépendances Linux.${NC}"
 
