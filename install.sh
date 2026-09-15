@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo apt install gum -y >> install.log 2>&1
 
 
 
@@ -19,13 +19,49 @@ NC='\033[0m'
 # message de lancement de l'installation
 #--------------------------------------------------------------
 echo -e "${CYAN}Installation du panel...${NC}"
-sudo apt install whiptail -y >> install.log 2>&1
 
-whiptail --msgbox "Ceci est un message" 10 50 –title "titre de la boite"
-MENU=$(whiptail --checklist "Choisissez les modules à installer" 15 60 4 \
-    "btop" "affichage des ressources système" ON \
-    "htop" "affichage des processus en temps réel" OFF \
-    3>&1 1>&2 2>&3)
+LANGCHOOSE=$(gum choose --limit 1 Français Anglais)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if gum confirm "voulez vous installer le panel ? "  --affirmative "true" --negative "false"; then
+    echo -e "${CYAN}Installation du panel...${NC}"
+else
+    echo -e "${RED}Installation annulée.${NC}"
+    exit 1
+fi
+
+
+# whiptail --msgbox "Ceci est un message" 10 50 –title "titre de la boite"
+# MENU=$(whiptail --checklist "Choisissez les modules à installer" 15 60 4 \
+#    "btop" "affichage des ressources système" ON \
+#    "htop" "affichage des processus en temps réel" OFF \
+#    3>&1 1>&2 2>&3)
 
 echo -e "${CYAN}----------------------------------------------------${NC}"
 echo -e "${CYAN}Bienvenue dans l'installation du Snow Web Panel...${NC}"
@@ -57,17 +93,6 @@ echo -e "${CYAN}Installation de Git...${NC}"
 sudo apt install git -y >> install.log 2>&1
 echo -e "${CYAN}Instalation de Node.js et npm...${NC}"
 sudo apt install nodejs npm -y >> install.log 2>&1
-
-
-if [[ $MENU == *"btop"* ]]; then
-    echo -e "${CYAN}Installation de btop...${NC}"
-    sudo apt install btop -y >> install.log 2>&1
-fi
-
-if [[ $MENU == *"htop"* ]]; then
-    echo -e "${CYAN}Installation de htop...${NC}"
-    sudo apt install htop -y >> install.log 2>&1
-fi
 
 echo -e "${CYAN}Fin de l'installation des dépendances Linux.${NC}"
 
