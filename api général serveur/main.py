@@ -1,6 +1,15 @@
+import mariadb
 from fastapi import FastAPI
 
+
 app = FastAPI()
+conn = mariadb.connect(
+    user="admin",
+    password="test",
+    host="51.91.214.189",
+    port=14658,
+    database="test"
+)
 
 
 ## user routes
@@ -50,3 +59,16 @@ async def get_user_login_form(user_name: str):
 @app.get("/login/form/mdp/{user_mdp}", tags=["login"])
 async def get_user_password_form(user_mdp: str):
     return {"user_mdp": user_mdp, "password_form": "Password form for user"}
+
+
+
+
+
+
+
+@app.get("/test/db", tags=["test"])
+async def create_test_table():
+    cursor = conn.cursor()
+    cursor.execute("CREATE TABLE IF NOT EXISTS test_table (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255))")
+    conn.commit()
+    return {"message": "Test table created successfully."}
