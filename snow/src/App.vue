@@ -8,12 +8,14 @@
         <button @click="createAccount">Créer un compte</button>
         <button @click="a">create db</button>
         <button @click="createTestAccount">create test account</button>
-        <router-link to="/create_account">Create Test Account</router-link>
+        <button @click="test">Test</button>
     </div>
 </template>
 
 <script setup>
     import { ref } from 'vue';
+    import router from './index.js';
+
 
     async function a() {
         console.log('create db');
@@ -37,7 +39,9 @@
         const data = await res.json();
         console.log(data);
     }
-
+    async function test() {
+        router.push('create_accounts');
+    }
 </script>
 
 <style>

@@ -3,8 +3,8 @@ import CreateAccount from './pages/acceuil/create_accounts.vue';
 import base from './App.vue';
 
 const routes = [
-    { path: '/', component: base },
-    { path: '/create_account', component: CreateAccount },
+
+    { path: '/create_accounts', component: CreateAccount },
 ];
 const router = createRouter({
     history: createWebHistory(),
