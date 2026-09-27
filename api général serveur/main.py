@@ -1,52 +1,44 @@
+import mariadb
+import bcrypt
 from fastapi import FastAPI
 
+
 app = FastAPI()
+conn = mariadb.connect(
+    user="admin",
+    password="test",
+    host="51.91.214.189",
+    port=14658,
+    database="test"
+)
 
 
-## user routes
-@app.get("/server/ressources/cpu/pourcent/{server_id}", tags=["user"])
-async def get_cpu_usage(server_id: str):
-    return {"server_id": server_id, "cpu_usage": "75%"}
+@app.get("/test/db", tags=["test"])
+async def create_test_table():
+    cursor = conn.cursor()
+    cursor.execute("CREATE TABLE IF NOT EXISTS test_table (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255))")
+    conn.commit()
+    return {"message": "Test table created successfully."}
 
-@app.get("/server/ressources/cpu/coeur/{server_id}" , tags=["user"])
-async def get_cpu_cores(server_id: str):
-    return {"server_id": server_id, "cpu_cores": 8}
+@app.get("/test/create_account/{user_name}/{user_mdp}", tags=["test"])
+async def create_test_account(user_name: str, user_mdp: str):
+    cursor = conn.cursor()
+    cursor.execute("CREATE TABLE IF NOT EXISTS test_accounts (id INT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(255), password VARCHAR(255))")
+    cursor.execute("INSERT INTO test_accounts (username, password) VALUES (?, ?)" , (user_name, user_mdp))
+    conn.commit()
+    return {"message": "Test account table created successfully."}
 
-@app.get("/server/ressources/cpu/frequence/{server_id}", tags=["user"])
-async def get_cpu_frequency(server_id: str):
-    return {"server_id": server_id, "cpu_frequency": "3.2 GHz"}
-
-@app.get("/server/ressources/memory/pourcent/{server_id}", tags=["user"])
-async def get_memory_usage(server_id: str):
-    return {"server_id": server_id, "memory_usage": "60%"}
-
-@app.get("/server/ressources/memory/taille/{server_id}", tags=["user"])
-async def get_memory_size(server_id: str):
-    return {"server_id": server_id, "memory_size": "16 GB"}
-
-@app.get("/server/ressources/memory/utilisee/{server_id}", tags=["user"])
-async def get_memory_used(server_id: str):
-    return {"server_id": server_id, "memory_used": "9.6 GB"}
-
-@app.get("/server/ressources/disk/pourcent/{server_id}", tags=["user"])
-async def get_disk_usage(server_id: str):
-    return {"server_id": server_id, "disk_usage": "80%"}
-
-@app.get("/server/ressources/network/pourcent/{server_id}", tags=["user"])
-async def get_network_usage(server_id: str):
-    return {"server_id": server_id, "network_usage": "50%"}
-
-
-
-
-
-
-
-## login private routes
-@app.get("/login/form/user/{user_name}", tags=["login"])
-async def get_user_login_form(user_name: str):
-    return {"user_name": user_name, "login_form": "Login form for user"}
-
-@app.get("/login/form/mdp/{user_mdp}", tags=["login"])
-async def get_user_password_form(user_mdp: str):
-    return {"user_mdp": user_mdp, "password_form": "Password form for user"}
+@app.get("/test/account/createform/{username}/{user_mdp}/{userconfirm_mdp}/{user_email}/{user_phone}", tags=["test"])
+async def create_test_account_form(username: str, user_mdp: str, userconfirm_mdp: str, user_email: str, user_phone: str):
+    if user_mdp != userconfirm_mdp:
+        return {"error": "Passwords do not match."}
+    if len(user_mdp) < 8:
+        return {"error": "Password must be at least 8 characters long."}
+    def hash_password(password):
+        return bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+    cursor = conn.cursor()
+    cursor.execute("CREATE TABLE IF NOT EXISTS test_accounts (id INT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(255), password VARCHAR(255), email VARCHAR(255), phone VARCHAR(20))")
+    hashed_password = hash_password(user_mdp)
+    cursor.execute("INSERT INTO test_accounts (username, password, email, phone) VALUES (?, ?, ?, ?)" , (username, hashed_password, user_email, user_phone, ))
+    conn.commit()
+    return {"message": "Test account created successfully."}             

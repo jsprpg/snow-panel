@@ -1,0 +1,5 @@
+db test externe
+ip : 51.91.214.189
+port : 14658
+user : admin
+mdp : test
