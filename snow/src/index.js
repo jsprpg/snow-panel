@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import CreateAccount from './pages/acceuil/create_accounts.vue';
-import base from './App.vue';
+import bienvenue from './pages/acceuil/bienvenue.vue';
 
 const routes = [
-
+    { path: '/bienvenue', component: bienvenue },
     { path: '/create_accounts', component: CreateAccount },
 ];
 const router = createRouter({
