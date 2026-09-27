@@ -8,6 +8,7 @@
         <button @click="createAccount">Créer un compte</button>
         <button @click="a">create db</button>
         <button @click="createTestAccount">create test account</button>
+        <router-link to="/create_account">Create Test Account</router-link>
     </div>
 </template>
 
@@ -36,6 +37,7 @@
         const data = await res.json();
         console.log(data);
     }
+
 </script>
 
 <style>
