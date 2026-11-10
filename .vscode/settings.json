@@ -1,3 +1,10 @@
 {
-    "python-envs.defaultEnvManager": "ms-python.python:system"
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "Lua.workspace.library": [
+        "${addons}/fivem/module/library"
+    ],
+    "Lua.runtime.nonstandardSymbol": [
+        "^="
+    ],
+    "Lua.workspace.checkThirdParty": false
 }
