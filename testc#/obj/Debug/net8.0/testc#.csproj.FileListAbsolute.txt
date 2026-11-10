@@ -1,0 +1,15 @@
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\bin\Debug\net8.0\testc#.exe
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\bin\Debug\net8.0\testc#.deps.json
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\bin\Debug\net8.0\testc#.runtimeconfig.json
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\bin\Debug\net8.0\testc#.dll
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\bin\Debug\net8.0\testc#.pdb
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\obj\Debug\net8.0\testc#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\obj\Debug\net8.0\testc#.AssemblyInfoInputs.cache
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\obj\Debug\net8.0\testc#.AssemblyInfo.cs
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\obj\Debug\net8.0\testc#.csproj.CoreCompileInputs.cache
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\obj\Debug\net8.0\testc#.sourcelink.json
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\obj\Debug\net8.0\testc#.dll
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\obj\Debug\net8.0\refint\testc#.dll
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\obj\Debug\net8.0\testc#.pdb
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\obj\Debug\net8.0\testc#.genruntimeconfig.cache
+C:\Users\Uti\Documents\plugin-dev\snow panel github\testc#\obj\Debug\net8.0\ref\testc#.dll
