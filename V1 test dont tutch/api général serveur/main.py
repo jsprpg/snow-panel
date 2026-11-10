@@ -12,6 +12,10 @@ conn = mariadb.connect(
     database="test"
 )
 
+cursor = conn.cursor()
+cursor.execute("CREATE  TABLE IF NOT EXISTS TESTAAA (name VARCHAR(100))")
+conn.commit
+
 
 @app.get("/test/db", tags=["test"])
 async def create_test_table():
