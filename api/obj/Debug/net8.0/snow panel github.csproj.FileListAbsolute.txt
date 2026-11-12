@@ -1,0 +1,26 @@
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\bin\Debug\net8.0\appsettings.json
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\bin\Debug\net8.0\snow panel github.exe
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\bin\Debug\net8.0\snow panel github.deps.json
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\bin\Debug\net8.0\snow panel github.runtimeconfig.json
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\bin\Debug\net8.0\snow panel github.dll
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\bin\Debug\net8.0\snow panel github.pdb
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\snow panel github.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\snow panel github.AssemblyInfoInputs.cache
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\snow panel github.AssemblyInfo.cs
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\snow panel github.csproj.CoreCompileInputs.cache
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\snow panel github.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\snow panel github.sourcelink.json
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\staticwebassets\msbuild.snow panel github.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\staticwebassets\msbuild.build.snow panel github.props
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.snow panel github.props
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.snow panel github.props
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\scopedcss\bundle\snow panel github.styles.css
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\snow panel github.dll
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\refint\snow panel github.dll
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\snow panel github.pdb
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\snow panel github.genruntimeconfig.cache
+C:\Users\Uti\Documents\plugin-dev\snow panel github\api\obj\Debug\net8.0\ref\snow panel github.dll
